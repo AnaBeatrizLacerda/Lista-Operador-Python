@@ -127,12 +127,10 @@ import math
 a = float(input("Digite o lado a: "))
 b = float(input("Digite o lado b: "))
 c = float(input("Digite o lado c: "))
-tipo = ["Isósceles", "Equilátero", "Escaleno"][
-    (a == b == c) * 1 + (a != b and b != c and a != c) * 2
-]
+tipo = ["Isósceles", "Equilátero", "Escaleno"][(a == b == c) * 1 + (a != b and b != c and a != c) * 2]
 p = (a + b + c) / 2
 area = math.sqrt(p * (p - a) * (p - b) * (p - c))
-print("Tipo do triângulo é: {tipo}")
+print(f"Tipo do triângulo é: {tipo}")
 print(f"Área do triângulo: {area}")
 
 
